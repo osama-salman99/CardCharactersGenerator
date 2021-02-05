@@ -49,10 +49,9 @@ public class CardCharactersGenerator extends JFrame {
         fontFamilies = new ArrayList<>();
         for (Font font : allFonts) {
             String fontFamily = font.getFamily();
-            if (fontFamilies.contains(fontFamily)) {
-                continue;
+            if (!fontFamilies.contains(fontFamily)) {
+                fontFamilies.add(fontFamily);
             }
-            fontFamilies.add(fontFamily);
         }
         System.out.println(fontFamilies.toString());
     }
